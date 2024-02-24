@@ -20,13 +20,20 @@ const config: HardhatUserConfig = {
       url: "https://gateway.tenderly.co/public/polygon-mumbai",
       accounts: vars.has("PK") ? [vars.get("PK")] : [],
     },
+    holesky: {
+      chainId: 17000,
+      url: "https://ethereum-holesky.publicnode.com",
+      accounts: vars.has("PK") ? [vars.get("PK")] : [],
+    }
   },
   multichain: {
     environment: Environment.TESTNET,
   },
   etherscan: {
     apiKey: { 
-      sepolia: process.env.API_KEY,
+      sepolia: process.env.SEPOLIA_API_KEY,
+      holesky: process.env.SEPOLIA_API_KEY,
+      polygonMumbai: process.env.MUMBAI_API_KEY,
     }
   },
 };
