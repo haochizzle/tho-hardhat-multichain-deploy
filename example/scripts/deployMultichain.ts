@@ -9,21 +9,21 @@ async function main(): Promise<void> {
       args: [deployer],
       initData: {
         initMethodName: "setName",
-        initMethodArgs: ["sepolia"],
+        initMethodArgs: ["sepolia by tim"],
       },
     },
     mumbai: {
       args: [deployer],
       initData: {
         initMethodName: "setName",
-        initMethodArgs: ["mumbai"],
+        initMethodArgs: ["mumbai by tim"],
       },
     },
     holesky: {
       args: [deployer],
       initData: {
         initMethodName: "setName",
-        initMethodArgs: ["holesky"],
+        initMethodArgs: ["holesky by tim"],
       },
     },
   };

@@ -1,4 +1,6 @@
 import 'dotenv/config';
+console.log(process.env.SEPOLIA_API_KEY, process.env.MUMBAI_API_KEY);
+
 import {HardhatUserConfig, vars} from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "@chainsafe/hardhat-ts-artifact-plugin";
@@ -32,7 +34,7 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: { 
       sepolia: process.env.SEPOLIA_API_KEY,
-      holesky: process.env.SEPOLIA_API_KEY,
+      holesky: process.env.HOLESKY_API_KEY,
       polygonMumbai: process.env.MUMBAI_API_KEY,
     }
   },
