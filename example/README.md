@@ -10,6 +10,16 @@ Before diving into the deployment process, you must first set up your environmen
 npx hardhat var set PK
 ```
 
+:::[Tim: Note on pk]
+Export private key from MetaMask and append "0x" to satisfy the 32 byte requirement of the priv key
+:::
+
+:::[Tim: Hardhat verify]
+Just to make my life *slightly* easier, this ver of the example uses hardhat-verify to verify the contract on etherscan. Slight mods are made to the code including adding dotenv as a dependency to insert an etherscan API key from a .env file 
+
+To run the verify command, format takes: `yarn hardhat verify --network sepolia [0x contract address] "[owner address]" [UNIX timestamp contract was deployed at]`
+:::
+
 ## Deployment Options
 
 This example offers three distinct deployment scripts, each catering to different deployment scenarios. Depending on your requirements, you can choose the script that best fits your needs.
