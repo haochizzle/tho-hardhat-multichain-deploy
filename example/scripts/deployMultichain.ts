@@ -29,7 +29,7 @@ async function main(): Promise<void> {
   };
 
   const { transactionHash, domainIDs } = await multichain.deployMultichain(
-    "Lock",
+    "SetName",
     networkArguments
   );
 
